@@ -1,9 +1,9 @@
 const {createPool} = require('mysql2/promise');
 
 const pool = createPool({
-  host: 'localhost',
+  host: 'db',
   user: 'root',
-  password: '',
+  password: 'myname123',
   database: 'todolist',
   namedPlaceholders: true,
 });
