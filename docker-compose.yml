@@ -4,7 +4,7 @@ services:
   frontend:
     build: ./client
     container_name: react-frontend
-    image: team-frontend-image
+    image: node-frontend-image
     ports:
       - "3000:3000"
     depends_on:
@@ -14,7 +14,7 @@ services:
   api:
     build: ./server
     container_name: node-backend
-    image: team-backend-image
+    image: node-backend-image
     env_file:
       - ./server/.env
     ports:
@@ -30,7 +30,7 @@ services:
 
   db:
     image: mysql:8.0
-    container_name: team-db
+    container_name: sql-db
     restart: always
     environment:
       MYSQL_ROOT_PASSWORD: "myname123"
